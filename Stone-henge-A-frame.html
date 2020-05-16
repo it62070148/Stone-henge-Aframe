@@ -1,0 +1,570 @@
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
+    
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+    
+</head>
+<body>
+    
+    <a-scene pool__enemy="mixin: enemy; size: 10">
+      <a-assets>
+        <img id="view" src="https://t3.ftcdn.net/jpg/02/99/83/48/240_F_299834872_DRNVY2zTzCsuFYegwXWxTzoJpzlUVVQZ.jpg">
+      </a-assets>
+        <!-- Red directional light shining from the top left. -->
+     <a-entity camera="active: true" look-controls wasd-controls="acceleration: 500" position="2 3 5"></a-entity> 
+       <a-sky  src="#view"></a-sky>
+       <a-sphere color="#FFFF00" position="-8 50 -17
+       " metalness="0.1" roughness="0.1" radius="3"></a-sphere>
+      <a-cylinder  height="20" radius="40" position="3 -9.8 -19"  color="#539342"></a-cylinder>
+    
+    
+      
+      <!-- pillar one. -->
+      <a-box position="-1 1 -3.65" rotation="0 -10 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.35"></a-box>
+      <a-cylinder  height="3" radius="0.15" position="-1.35 1 -3.69" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.15" position="-0.65 1 -3.55" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+       <!-- pillar two. -->
+      <a-box position="1 1 -3.3" rotation="0 -10 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.25"></a-box>
+      <a-cylinder  height="3" radius="0.23" position="0.68 1 -3.5" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.2" position="1.4 1 -3.3" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+    
+      <!-- pillar three. -->
+      <a-box position="3 1 -3.2" rotation="0 5 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.25"></a-box>
+      <a-cylinder  height="3" radius="0.2" position="2.7 1 -3.25" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.2" position="3.4 1 -3.32" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      
+      <!-- pillar four. -->
+      <a-box position="5.2 1 -3.4" rotation="0 5 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.25"></a-box>
+      <a-cylinder  height="3" radius="0.2" position="4.9 1 -3.45" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.2" position="5.6 1 -3.5d" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <!-- one. -->
+      <a-box position="-0.08 2.7 -3.6" rotation="0 -10 0" color="rgb(200, 195, 173)" width="2.6" height="0.4" depth="0.5"></a-box>
+      <!-- two. -->
+      <a-box position="2.2 2.7 -3.3" rotation="0 -5 0" color="rgb(200, 195, 173)" width="2" height="0.4" depth="0.5"></a-box>
+      <!-- three. -->
+      <a-box position="4.2 2.7 -3.32" rotation="0 5 0" color="rgb(200, 195, 173)" width="2" height="0.4" depth="0.5"></a-box>
+      <!-- four. -->
+      <a-box position="-4.4 2.7 -6.7" rotation="0 -55 0" color="rgb(200, 195, 173)" width="1.5" height="0.4" depth="0.5"></a-box>
+      <!-- five. -->
+      <a-box position="-6.2 2.7 -9.7" rotation="0 -65 0" color="rgb(200, 195, 173)" width="1.3" height="0.4" depth="0.5"></a-box>
+      <!-- six. -->
+      <a-box position="13.7 2.7 -14.3" rotation="0 -90 0" color="rgb(200, 195, 173)" width="1.3" height="0.4" depth="0.5"></a-box>
+      
+      
+      <!-- rock behind 4 pillar. -->
+      <a-box position="1.6 0.5 -4.5" rotation="0 -5 0" color="rgb(200, 195, 173)" width="0.6" height="1.6" depth="0.2"></a-box>
+        <a-box position="2.9 0.5 -4.5" rotation="0 -5 0" color="rgb(200, 195, 173)" width="0.6" height="1.6" depth="0.2"></a-box>
+    <a-gltf-model src="tree.gltf" shadow="cast:false"></a-gltf-model>
+      
+      
+      <!-- pillar 1 left side of 4 pillar. -->
+      <a-box position="-2.6 1 -4.5" rotation="0 -40 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box>
+      <a-cylinder  height="3" radius="0.16" position="-2.9 1 -4.7" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.16" position="-2.4 1 -4.28" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      
+      <!-- pillar 2 left side of 4 pillar. -->
+      <a-box position="-4 1 -6" rotation="0 -50 0" color="rgb(200, 195, 173)" width="0.65" height="3" depth="0.4"></a-box>
+      <!-- <a-cylinder  height="3" radius="0.18" position="-4.3 1 -6.31" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.18" position="-3.8 1 -5.74" width="1" color="rgb(200, 195, 173)"></a-cylinder> -->
+      
+      
+       <!-- pillar 3 left side of 4 pilla -->
+      <a-box position="-5 1 -7.4" rotation="0 -55 0" color="rgb(200, 195, 173)" width="0.8" height="1.5" depth="0.4"></a-box>
+      <a-box position="-5 1.8 -7.4" rotation="0 -55 0" color="rgb(200, 195, 173)" width="0.4" height="1.5" depth="0.4"></a-box>
+      <a-box position="-4.86 2.1 -7.2" rotation="0 -55 5" color="rgb(200, 195, 173)" width="0.2" height="0.9" depth="0.4"></a-box>
+      <a-box position="-5.16 2.1 -7.62" rotation="0 -55 -5" color="rgb(200, 195, 173)" width="0.2" height="0.9" depth="0.4"></a-box>
+    
+      
+      
+      
+      
+      <!-- pillar 4 left side of 4 pillar. -->
+      <a-box position="-5.9 1 -8.9" rotation="0 -65 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box>
+      <!-- <a-cylinder  height="3" radius="0.18" position="-6.7 1 -9.7" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.18" position="-6.3 1 -9.11" width="1" color="rgb(200, 195, 173)"></a-cylinder> -->
+      <!-- pillar 5 left side of 4 pillar. -->
+      <a-box position="-6.5 1 -10.3" rotation="0 -65 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box>
+      <!-- <a-cylinder  height="3" radius="0.18" position="-6.7 1 -9.7" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.18" position="-6.3 1 -9.11" width="1" color="rgb(200, 195, 173)"></a-cylinder> -->
+      
+     <!-- pillar 6 left side of 4 pillar. -->
+      <a-box position="-6.2 1 -17.3" rotation="0 -120 0" color="rgb(200, 195, 173)" width="1.2" height="3" depth="0.4"></a-box>
+      <!-- <a-cylinder  height="3" radius="0.18" position="-6.7 1 -9.7" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.18" position="-6.3 1 -9.11" width="1" color="rgb(200, 195, 173)"></a-cylinder> --> 
+      
+     <!-- pillar 7 left side of 4 pillar. -->
+      <a-box position="-5 1 -18.8" rotation="0 -150 0" color="rgb(200, 195, 173)" width="0.7" height="1.3" depth="0.2"></a-box>
+      <a-box position="-4.86 1.75 -18.86" rotation="0 -150 -5" color="rgb(200, 195, 173)" width="0.35" height="0.5" depth="0.2"></a-box>
+      <a-box position="-5.145 1.75 -18.722" rotation="0 -150 5" color="rgb(200, 195, 173)" width="0.35" height="0.5" depth="0.19"></a-box>
+      <a-box  height="0.63"  position="-5 1.85 -18.8" width="0.3" color="rgb(200, 195, 173)" rotation="0 -150 90" depth="0.2"></a-box>
+      <!-- <a-box position="-5 1 -18.8" rotation="0 -150 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box> -->
+      <!-- <a-cylinder  height="3" radius="0.18" position="-6.7 1 -9.7" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.18" position="-6.3 1 -9.11" width="1" color="rgb(200, 195, 173)"></a-cylinder> --> 
+      
+      <!-- stone -->
+      <a-cylinder position="-3.2 0.3 -20.3" radius="0.5" height="1.5" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="4.5 0.8 1.7" rotation="0 -60 0"></a-cylinder>
+        <!-- <a-box position="-3.2 0.3 -20.3" rotation="90 0 0" color="gray" width="1" height="1.5" depth="1"></a-box>v
+          <a-sphere position="-3.4 0.3 -19.8" radius="0.5" color="gray"  shadow="" material="" geometry="primitive: dodecahedron"></a-sphere>
+          <a-sphere position="-3.4 0.35 -19.8" radius="0.5" color="gray"  shadow="" material="" geometry="primitive: dodecahedron"></a-sphere>
+           <a-sphere position="-2.8 0.2 -19.8" radius="0.5" color="gray"  shadow="" material="" geometry="primitive: dodecahedron"></a-sphere>
+           <a-sphere position="-2.8 0.1 -19.3" radius="0.5" color="gray"  shadow="" material="" geometry="primitive: dodecahedron"></a-sphere>
+           <a-sphere position="-3.4 0.1 -18.8" radius="0.5" color="gray"  shadow="" material="" geometry="primitive: dodecahedron"></a-sphere>
+           <a-sphere position="-3 0.1 -19.8" radius="0.5" color="gray"  shadow="" material="" geometry="primitive: dodecahedron"></a-sphere> -->
+      
+     <!--  <a-box position="-3.2 0.3 -20.3" rotation="0 -70 0" color="" width="3" height="0.7" depth="1.2"></a-box>
+      <a-box position="-3.4 0.3 -19.8" rotation="0 -70 0" color="" width="1" height="0.7" depth="1.2"></a-box>
+      <a-box position="-3.4 0.35 -19.8" rotation="0 -70 0" color="" width="1" height="0.7" depth="1.2"></a-box>
+      <a-box position="-2.8 0.2 -19.8" rotation="0 -70 d20" color="" width="1" height="0.7" depth="1.2"></a-box>
+      <a-box position="-2.8 0.1 -19.3" rotation="-30 -70 0" color="" width="3" height="0.7" depth="0.6"></a-box>
+      <a-box position="-3.4 0.1 -18.8" rotation="30 -70 0" color="" width="3" height="0.7" depth="0.6"></a-box>
+      <a-box position="-3 0.1 -19.8" rotation="30 -70 0" color="" width="3" height="0.7" depth="0.6"></a-box> -->
+      <!-- <a-cylinder  height="3" radius="0.18" position="-6.7 1 -9.7" width="1" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="3" radius="0.18" position="-6.3 1 -9.11" width="1" color="rgb(200, 195, 173)"></a-cylinder> --> 
+     
+     
+      <a-cylinder  height="1" radius="0.8" position="-9.5 0.1 -12.5"  color="rgb(200, 195, 173)" rotation="0 0 5"></a-cylinder>
+      <a-cylinder  height="1" radius="0.7" position="-8.5 0.1 -15"  color="rgb(200, 195, 173)" rotation="0 0 5"></a-cylinder> 
+      <a-cylinder  height="1" radius="0.6" position="-6.8 .10 -15"  color="rgb(200, 195, 173)" rotation="0 0 5"></a-cylinder> 
+  
+      <!--cloud 1 -->
+      <a-entity position="-5 19 -25" rotation="0 0 0"animation="property:position;
+                           to:0 19 -25;
+                           dur:4000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="-5 19 -25" rotation="0 -20 0" color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="-6 19 -25" rotation="0 70 0" color="white" metalness="0.1" roughness="0.1" width="2px" height="0.5px"> </a-box>
+      <a-box position="-5.7 19 -25" rotation="0 -20 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="-3 19 -25" rotation="0 -20 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="-1.75 19 -25" rotation="0 70 0"color="white" metalness="0.1" roughness="0.1" width="0.8px" height="0.5px"> </a-box>
+        </a-entity>
+      <a-entity position="-5 19 -25" rotation="0 0 0"animation="property:position;
+                           to:-0 19 -25;
+                           dur:4500;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="0 19 -23" rotation="0 -20 0"color="white" metalness="0.1" roughness="0.1" width="1px" height="0.5px"> </a-box>
+      <a-box position="-3.3 19 -25" rotation="0 70 0"color="white" metalness="0.1" roughness="0.1" width="2px" height="0.5px"> </a-box>
+      <a-box position="-5.7 19 -25" rotation="0 -20 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="-5 19 -25" rotation="0 70 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+         </a-entity>
+      <a-entity position="-6 19 -25" rotation="0 0 0"animation="property:position;
+                           to:-1 19 -25;
+                           dur:5000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="-6 19 -25" rotation="0 70 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="-6.6 19 -25" rotation="0 70 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+        </a-entity>
+      <a-entity position="10 20 -20" rotation="0 0 0"animation="property:position;
+                           to:5 20 -20;
+                           dur:4000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="10 20 -20" rotation="0 -20 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="9 20 -20" rotation="0 70 0" color="white" metalness="0.1" roughness="0.1" width="1px" height="0.5px"> </a-box>
+        </a-entity>
+      <a-entity position="14 16 -30" rotation="0 0 0"animation="property:position;
+                           to:9 16 -30;
+                           dur:4500;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="-14 16 -30" rotation="0 130 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="-14.5 16 -30" rotation="0 130 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="-15 16 -30" rotation="0 130 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+        </a-entity>
+      <a-entity position="30 20 -10" rotation="0 0 0"animation="property:position;
+                           to:25 20 -10;
+                           dur:5000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="30 20 -10" rotation="0 -20 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="28 20 -10" rotation="0 70 0" color="white" metalness="0.1" roughness="0.1" width="1px" height="0.5px"> </a-box>
+        </a-entity>
+       <a-entity position="-10 19 -10" rotation="0 0 0"animation="property:position;
+                           to:-5 19 -10;
+                           dur:4000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="-10 19 -10" rotation="0 -70 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="-10 19 -10" rotation="0 20 0" color="white" metalness="0.1" roughness="0.1" width="2px" height="0.5px"> </a-box>
+      <a-box position="-10.7 19 -10" rotation="0 -70 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="-10 19 -10" rotation="0 20 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="-10.75 19 5" rotation="0 20 0"color="white" metalness="0.1" roughness="0.1" width="0.8px" height="0.5px"> </a-box>
+      </a-entity>
+      <a-entity position="20 19 -10" rotation="0 0 0"animation="property:position;
+                           to:15 19 -10;
+                           dur:4000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="20 19 -10" rotation="0 -70 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="20 19 -10" rotation="0 20 0" color="white" metalness="0.1" roughness="0.1" width="2px" height="0.5px"> </a-box>
+      <a-box position="20.7 19 -10" rotation="0 -70 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="0.5px"> </a-box>
+      <a-box position="20 19 -10" rotation="0 20 0"color="white" metalness="0.1" roughness="0.1" width="3px" height="0.5px"> </a-box>
+      <a-box position="20.75 19 5" rotation="0 20 0"color="white" metalness="0.1" roughness="0.1" width="0.8px" height="0.5px"> </a-box>
+        </a-entity>
+      <a-entity position="4 20 -10" rotation="0 0 0"animation="property:position;
+                           to:-1 20 -10;
+                           dur:5000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="1 20 -15" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+      <a-box position="3.5 20 -14.5" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2.5px" height="7px"> </a-box>
+      <a-box position="4 19.5 -15" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+        </a-entity>
+      <a-entity position="20 20 -40" rotation="0 0 0"animation="property:position;
+                           to:13 20 -40;
+                           dur:5000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="20 20 -40" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+      <a-box position="21 20 -39" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2.5px" height="7px"> </a-box>
+      <a-box position="22 19.5 -40" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+         </a-entity>
+      <a-entity position="-40 20 -40" rotation="0 0 0"animation="property:position;
+                           to:-35 20 -40;
+                           dur:4000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="-40 20 -40" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+      <a-box position="-41 20 -39" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2.5px" height="7px"> </a-box>
+        </a-entity>
+      <a-entity position="-25 20 -15" rotation="0 0 0"animation="property:position;
+                           to:-35 20 -15;
+                           dur:6000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="-25 20 -15" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+      <a-box position="-26 20 -15" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2.5px" height="7px"> </a-box>
+        </a-entity>
+      <a-entity position="20 20 -20" rotation="0 0 0"animation="property:position;
+                           to:15 20 -20;
+                           dur:5000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="20 20 -20" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+      <a-box position="21 20 -20" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2.5px" height="7px"> </a-box>
+        </a-entity>
+      <a-entity position="1 20 5" rotation="0 0 0"animation="property:position;
+                           to:6 20 5;
+                           dur:4000;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="1 20 5" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="5px" height="5px"> </a-box>
+      <a-box position="1 20 5" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2.5px" height="7px"> </a-box>
+        </a-entity>
+      <a-entity position="11 20 5" rotation="0 0 0"animation="property:position;
+                           to:16 20 5;
+                           dur:4500;
+                           loop:true;
+                           dir:alternate;
+                           easing:linear;
+                           ">
+      <a-box position="11 20 5" rotation="90 0 0"color="white" metalness="0.1" roughness="0.1" width="2px" height="3px"> </a-box>
+      <a-box position="10 20 5" rotation="90 0 0" color="white" metalness="0.1" roughness="0.1" width="3px" height="1px"> </a-box>
+      </a-entity>
+      <!-- stone1 rigth round-->
+      <a-box position="7.3 1 -3.9" rotation="0 20 0" color="rgb(200, 195, 173)" width="1" height="1.5" depth="0.4"></a-box>
+      <a-box position="7.19 2 -3.85" rotation="0 20 -5" color="rgb(200, 195, 173)" width="0.7" height="1" depth="0.4"></a-box>
+      <a-box position="7.41 2 -3.93" rotation="0 20 5" color="rgb(200, 195, 173)" width="0.7" height="1" depth="0.4"></a-box>
+      <a-box  height="0.85"  position="7.3 2.45 -3.9" width="0.2" color="rgb(200, 195, 173)" rotation="0 20 90" depth="0.4"></a-box>
+      <!-- <a-box position="-5 1 -18.8" rotati -->
+      <!-- stone r 1-->
+      <a-box position="8.8 1 -4.6" rotation="0 20 0" color="rgb(200, 195, 173)" width="1" height="1.5" depth="0.4"></a-box>
+      <a-box position="8.69 2 -4.55" rotation="0 20 -5" color="rgb(200, 195, 173)" width="0.7" height="1" depth="0.4"></a-box>
+      <a-box position="8.9 2 -4.63" rotation="0 20 5" color="rgb(200, 195, 173)" width="0.7" height="1" depth="0.4"></a-box>
+      <a-box  height="0.85"  position="8.8 2.45 -4.6" width="0.2" color="rgb(200, 195, 173)" rotation="0 20 90" depth="0.4"></a-box>
+      <!-- <a-box position="8.8 1 -4.6" rotation="0 30 0" color="rgb(200, 195, 173)" width="1" height="1.5" depth="0.4"></a-box> -->
+       
+      <!-- stone r2-->
+      <a-box position="11.4 0.3 -5.5" rotation="90 -50 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 0.5 0.4"
+      ></a-box>
+      <a-box position="10.5 0.3 -5.5" rotation="0 0 0" color="rgb(200, 195, 173)" width="0.8" height="0.5" depth="1.5"></a-box>
+      <a-box position="10.5 0.3 -4.65" rotation="0 0 0" color="rgb(200, 195, 173)" width="0.4" height="0.5" depth="0.5"></a-box>
+      <a-box position="10.3 0.3 -4.62" rotation="0 120 0" color="rgb(200, 195, 173)" width="0.4" height="0.5" depth="0.2"></a-box>
+      <a-box position="10.72 0.3 -4.62" rotation="0 -120 0" color="rgb(200, 195, 173)" width="0.4" height="0.5" depth="0.2"></a-box>
+      <a-box position="10.5 0.3 -6.32" rotation="0 0 0" color="rgb(200, 195, 173)" width="0.4" height="0.5" depth="0.5"></a-box>
+      <a-box position="10.3 0.3 -6.35" rotation="0 -120 0" color="rgb(200, 195, 173)" width="0.4" height="0.5" depth="0.2"></a-box>
+      <a-box position="10.72 0.3 -6.35"rotation="0 120 0" color="rgb(200, 195, 173)" width="0.4" height="0.5" depth="0.2"></a-box>
+      
+      
+      
+     
+      <!-- ก้อนนี้ ทำ drangon-->
+      <a-box position="14.2 0 -8.5" rotation="0 -45 0" color="rgb(200, 195, 173)" width="1.2" height="0.8" depth="3.5"></a-box>
+      <a-box position="14.2 0 -8.5" rotation="0 -45 0" color="rgb(200, 195, 173)" width="1.2" height="1" depth="2"></a-box>
+    
+      
+      <!-- ถึงนี่ -->
+      
+      
+      
+      <!-- stone r5-->
+      <a-box position="13.9 1 -12" rotation="0 90 0" color="rgb(200, 195, 173)" width="1" height="3" depth="0.4"></a-box>
+      
+      
+      <!-- stone r6-->
+      <a-box position="13.8 1 -13.5" rotation="0 90 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box>
+      <!-- stone r7-->
+      <a-box position="13.6 1 -15.1" rotation="0 110 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box>
+     
+      <!-- stone r8-->
+      <a-box position="13.3 0.3
+       -18.8" rotation="0 -60 0" color="rgb(200, 195, 173)" width="0.6" height="0.5" depth="1.5"></a-box>
+      <!-- stone r8-->
+      <a-box position="13.3 0.3 -19.8" rotation="90 -50 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 0.5 0.4"
+      ></a-box>
+      <!-- <a-box position="13.3 0.5 -19.8" rotation="0 -60 0" color="rgb(200, 195, 173)" width="0.6" height="0.5" depth="0.8"></a-box -->>
+      <!-- stone r9-->
+      <!-- <a-box position="8.8 1 -4.6" rotation="0 20 0" color="rgb(200, 195, 173)" width="1" height="1.5" depth="0.4"></a-box> -->
+     <!--  <a-box position="3.89 2 -22.9" rotation="0 5 -5" color="rgb(200, 195, 173)" width="0.7" height="1" depth="0.4"></a-box>
+      <a-box position="4.1 2 -23.03" rotation="0 5 5" color="rgb(200, 195, 173)" width="0.7" height="1" depth="0.4"></a-box>
+      <a-box  height="0.85"  position="4 2.45 -23" width="0.2" color="rgb(200, 195, 173)" rotation="0 5 90" depth="0.4"></a-box>
+      <a-box position="4 1 -23" rotation="0 5 0" color="rgb(200, 195, 173)" width="1" height="3" depth="0.4"></a-box> -->
+      
+      
+      
+       <!--WEN's stone5-->
+    
+       <!--WEN's stone6-->
+      <a-box position="-2 0.5 -9.5" rotation="0 90 0" color="rgb(200, 195, 173)" width="1" height="6" depth="0.4"></a-box>
+      <a-box position="-2 0.5 -8.1" rotation="0 90 0" color="rgb(200, 195, 173)" width="1" height="6" depth="0.4"></a-box>
+      <a-cylinder  height="6" radius="0.16" position="-2.2 0.5 -12.7" width="1.8" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="6" radius="0.16" position="-1.2 0.5 -14.3" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-box position="-2 3.5 -8.7" rotation="90 0 0" color="rgb(200, 195, 173)" width="0.7" height="3" depth="0.4"></a-box>
+      
+      
+      <!--WEN's stone cylinnder 7-->
+      <a-box position="-1.5 0.5 -14" rotation="0 50 0" color="rgb(200, 195, 173)" width="0.8" height="6" depth="0.4"></a-box>
+     <a-box position="-2 0.5 -13" rotation="0 50 0" color="rgb(200, 195, 173)" width="0.8" height="6" depth="0.4"></a-box>
+      <a-cylinder  height="6" radius="0.16" position="-2 0.5 -10" width="1.8" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="6" radius="0.16" position="-2 0.51 -9" width="1.8" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="6" radius="0.16" position="-2 0.5 -8.6 " width="1.8" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-cylinder  height="6" radius="0.16" position="-2 0.51 -7.6 " width="1.8" color="rgb(200, 195, 173)"></a-cylinder>
+      <a-box position="-1.8 3.5 -13.6" rotation="90 -30 0" color="rgb(200, 195, 173)" width="0.8" height="3" depth="0.4"></a-box>
+      
+      
+       <a-box position="-0.8 0.4 -11.2" rotation="0 45 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.2 1 0.2"
+      ></a-box>
+       <a-box position="-0.8 0.4 -10.5" rotation="0 45 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.2 1 0.2"
+      ></a-box>
+       <a-box position="-0.8 0.4 -7.5" rotation="0 45 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.2 1 0.2"
+      ></a-box>
+     <a-box position="-4.6 0.4 -9" rotation="0 45 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.2 1 0.2"
+      ></a-box>
+      <a-box position="-3.5 0.5 -13.5" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 0.4 0.4" ></a-box>
+     <a-box position="-3.5 0.4 -13.9" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.3 0.3 0.3" ></a-box>
+      <a-box position="-2.7 0.4 -17" rotation="90 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.3 0.5 0.3" ></a-box>
+      
+      
+      
+      <!--WEN's stone8 4.7 0.5 -10.7-->
+      
+      <a-box position="2 0.4 -6.5" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.5 0.5 0.5"
+      ></a-box>
+       <a-box position="3.1 0.4 -6.5" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.5 0.5 0.5"
+      ></a-box>
+     <a-box position="4.4 0.15 -6.3" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.5 0.5 0.5"
+      ></a-box>
+      <a-box position="5.3 0.2 -6.9" rotation="90 45 0" color="rgb(200, 195, 173)"  width="0.8" height="1.2"
+      ></a-box>
+      <a-box position="4.2 0.2 -7.2" rotation="90 -50 0" color="rgb(200, 195, 173)"  width="0.5" height="1.3"
+      ></a-box>
+      <a-box position="3.6 0.2 -7.8" rotation="90 -30 0" color="rgb(200, 195, 173)"  width="0.5" height="1.3"
+      ></a-box>
+      
+      
+      <a-box position="7.6 0.5 -8.5" rotation="0 110 0" color="rgb(200, 195, 173)" width="1" height="6" depth="0.4"></a-box>
+       <a-box position="7 0.5 -10" rotation="0 110 0" color="rgb(200, 195, 173)" width="1" height="6" depth="0.4"></a-box>
+      
+      
+    <a-box position="5.8 0 -9.5" rotation="0 110 0" color="rgb(200, 195, 173)" width="0.5" height="2.4" depth="0.4"></a-box>
+     <a-box position="6.2 0 -8.7" rotation="0 110 0" color="rgb(200, 195, 173)" width="0.5" height="2.3" depth="0.4"></a-box>
+      
+      
+      <a-box position="4 0.2 -9.9" rotation="90 20 0" color="rgb(200, 195, 173)"  width="0.5" height="1.4"
+      ></a-box>
+       <a-box position="2.9 0.4 -10.2" rotation="90 -10 0" color="rgb(200, 195, 173)"  width="1" height="1.4"
+      depth="0.4 "></a-box>
+      
+      <a-box position="5 0.5 -12.5" rotation="0 -40 0" color="rgb(200, 195, 173)" width="1.4" height="6.5" depth="0.5"></a-box>
+      <a-box position="4.7 0.3 -10.7" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.3 0.3 0.3" ></a-box>
+     <a-box position="4.5 0.4 -11.5" rotation="0 45 0" color="rgb(200, 195, 173)" width="0.1" height="1.3" depth="0.4"
+      ></a-box>
+      <a-box position="3.2 0.4 -11.8" rotation="90 -10 0" color="rgb(200, 195, 173)" width="1" height="1.5" depth="0.5"></a-box>
+       <a-box position="3.7 0.4 -14.1" rotation="90 -55 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 1 0.4"
+      ></a-box>
+     <a-box position="2.4 0.5 -13.5" rotation="0 0 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.3 0.3 0.3"
+      ></a-box>
+      <a-box position="6.5 0.5 -17.6" rotation="0 -40 0" color="rgb(200, 195, 173)" width="1.6" height="6" depth="0.5"></a-box>
+      <a-box position="2.4 0.4 -15.2" rotation="90 0 0" color="rgb(200, 195, 173)" height="2" depth="0.5"
+      ></a-box>
+       <a-box position="10.5 0 -8.5" rotation="90 40 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 1 0.4"
+      ></a-box>
+      <a-box position="11 0 -10.5" rotation="90 40 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 1 0.4"
+      ></a-box>
+     <a-box position="12 0 -12.5" rotation="90 40 0" color="rgb(200, 195, 173)" shadow="" material="" geometry="primitive: dodecahedron" scale="0.4 1 0.4"
+      ></a-box>
+      <a-box position="8 0.5 -10.5" rotation="0 10 0" color="rgb(200, 195, 173)" width="0.6" height="0.5" depth="1.2"></a-box>
+      
+      <a-cylinder position="7.3 3.8 -9.3" radius="0.5" height="1.5" color="rgb(200, 195, 173)" shadow="" material="" geometry="" scale="3 0.4 0.8" rotation="0 110 0"></a-cylinder>
+    
+      <a-cylinder  height="6" radius="0.16" position="7.8 0.5 -8.1 " width="1" color="rgb(200, 195, 173)"></a-cylinder>
+       <a-cylinder  height="6" radius="0.16" position="6.8 0.5 -10.5 " width="1" color="rgb(200, 195, 173)"></a-cylinder>d
+      <a-box position="5 0 -5.8" rotation="0 30 0" color="rgb(200, 195, 173)" width="1" height="4" depth="0.2" ></a-box>
+      ds
+        <!--runway-->
+              <!--ทางเดินใหญ่-->
+        <a-box position="-6.1 0.2 15.1"  rotation="0 -105 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="0 0.2 16.2"  rotation="0 -95 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="6.1 0.2 16.2"  rotation="0 -85 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="12.2 0.2 15.1"  rotation="0 -75 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="18 0.2 13"  rotation="0 -65 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="23.3 0.2 9.9"  rotation="0 -55 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="28 0.2 5.9"  rotation="0 -45 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="32 0.2 1.2"  rotation="0 -35 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="35.1 0.2 -4.2"  rotation="0 -25 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="37.2 0.2 -10"  rotation="0 -15 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="38.2 0.2 -16"  rotation="0 -5 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="38.16 0.2 -22"  rotation="0 5 0" height="0.07" color="#c0b591" depth="8" width="9"></a-box>
+        <a-box position="37 0.2 -28.5"  rotation="0 15 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="34.9 0.2 -34.1"  rotation="0 25 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="31.8 0.2 -39.5"  rotation="0 35 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="28 0.2 -44.1"  rotation="0 45 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="23.3 0.2 -48"  rotation="0 55 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="18 0.2 -51"  rotation="0 65 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+        <a-box position="12.15 0.2 -53.1"  rotation="0 75 0" height="0.07" color="#c0b591" depth="7" width="9"></a-box>
+          <!--ทางเดินเล็กสีขาว เเละ สีฟ้าย่อย 2-->
+          <a-box position="6.9 0.2 -50.8"  rotation="0 -15 0" height="0.07" color="#bbb8b8" depth="2" width="2"></a-box>
+        <a-box position="8.3 0.2 -48.4"  rotation="0 -15 0" height="0.07" color="#bbb8b8" depth="2" width="2"></a-box>
+        <a-box position="6.36 0.2 -48.9"  rotation="0 -15 0" height="0.07" color="#bbb8b8" depth="2" width="2"></a-box>
+        <a-box position="8 0.2 -55.1"  rotation="0 -15 0" height="0.07" color="#5c8b84" depth="6.8" width="2"></a-box>
+        <a-box position="4.7 0.2 -41.8"  rotation="0 -15 0" height="0.07" color="#bbb8b8" depth="13" width="2.5"></a-box>
+        <a-box position="-5.7 0.2 -33"  rotation="0 20 0" height="0.07" color="#bbb8b8" depth="2.5" width="20"></a-box>
+        <a-box position="-21 0.2 -36.5"  rotation="0 -45 0" height="0.07" color="#bbb8b8" depth="2.5" width="20"></a-box>
+        <a-box position="-18.5 0.2 10"  rotation="0 60 0" height="0.07" color="#5c8b84" depth="19" width="3.5"></a-box>
+        <a-box position="-10.3 0.2 14.8"  rotation="0 75 0" height="0.07" color="#5c8b84" depth="1.2" width="3.5"></a-box>
+          <!--ตกเเต่ง-->
+          <a-box position="-10 0.5 3" rotation="0 -100 -15" color="#979783" width="3" height="1" depth="2"></a-box>
+          <a-box position="-16 0.5 5" rotation="0 130 0" color="#979783" width="2" height="1" depth="2"></a-box>
+          <!-- นก 1-->
+      <a-entity position="30 15 -5" rotation="0 0 0"animation="property:position;
+                           to:-40 15 -15;
+                           dur:15000;
+                           loop:true;
+                           easing:linear;
+                           "
+                animation__2="property: rotation;
+                           to: -180 0 0;
+                           dur:4000;
+                           dir: alternate;   
+                           loop:true;
+                           easing:linear;">
+      <!--ตัวนก-->
+      <a-box position="1.9 1 0" rotation="90 90 0" color="#330000" width="0.25"  depth="0.2" height="0.7"></a-box>
+      <!--ปีก-->
+      <a-box position="1.8 1 0.3" rotation="90 0 0" color="#330000" width="0.3"  depth="0.05" height="0.5"></a-box>
+      <a-box position="1.8 1 -0.3" rotation="90 0 0" color="#330000" width="0.3"  depth="0.05" height="0.5"></a-box>
+      <!--หัว-->
+       <a-box position="1.55 0.98 0" rotation="90 90 0" color="white" width="0.15"  depth="0.15" height="0.4"></a-box>
+      <a-box position="1.35 0.95 0" rotation="90 90 0" color="yellow" width="0.1"  depth="0.05" height="0.3"></a-box>
+      <!--ตา-->
+      <a-box position="1.35 1 0.05" rotation="90 90 0" color="black" width="0.05"  depth="0.05" height="0.05"></a-box>
+       <a-box position="1.35 1 -0.05" rotation="90 90 0" color="black" width="0.05"  depth="0.05" height="0.05"></a-box>
+      <!--ตูด-->
+       <a-box position="2.3 1.1 0" rotation="70 90 0" color="#330000" width="0.25"  depth="0.05" height="0.3"></a-box>
+      </a-entity>
+        
+      <!-- นก 2-->
+      <a-entity position="30 15 -5" rotation="0 0 0"animation="property:position;
+                           to:-40 15 -50;
+                           dur:11000;
+                           loop:true;
+                           easing:linear;
+                           "
+                animation__2="property: rotation;
+                           to: -180 0 0;
+                           dur:4000;
+                           dir: alternate;   
+                           loop:true;
+                           easing:linear;">
+      <!--ตัวนก-->
+      <a-box position="1.9 1 0" rotation="90 90 0" color="#330000" width="0.25"  depth="0.2" height="0.7"></a-box>
+      <!--ปีก-->
+      <a-box position="1.8 1 0.3" rotation="90 0 0" color="#330000" width="0.3"  depth="0.05" height="0.5"></a-box>
+      <a-box position="1.8 1 -0.3" rotation="90 0 0" color="#330000" width="0.3"  depth="0.05" height="0.5"></a-box>
+      <!--หัว-->
+       <a-box position="1.55 0.98 0" rotation="90 90 0" color="white" width="0.15"  depth="0.15" height="0.4"></a-box>
+      <a-box position="1.35 0.95 0" rotation="90 90 0" color="yellow" width="0.1"  depth="0.05" height="0.3"></a-box>
+      <!--ตา-->
+      <a-box position="1.35 1 0.05" rotation="90 90 0" color="black" width="0.05"  depth="0.05" height="0.05"></a-box>
+       <a-box position="1.35 1 -0.05" rotation="90 90 0" color="black" width="0.05"  depth="0.05" height="0.05"></a-box>
+      <!--ตูด-->
+       <a-box position="2.3 1.1 0" rotation="70 90 0" color="#330000" width="0.25"  depth="0.05" height="0.3"></a-box>
+      </a-entity>
+      
+      <!-- นก 3-->
+      <a-entity position="15 12 -2" animation="property:position;
+                           to:-40 20 -2;
+                           dur:10000;
+                           loop:true;
+                           easing:linear;
+                           ">
+      <!--ตัวนก-->
+      <a-box position="1.9 1 0" rotation="90 90 0" color="#330000" width="0.25"  depth="0.2" height="0.7"></a-box>
+      <!--ปีก-->
+      <a-box position="1.8 1 0.3" rotation="90 0 0" color="#330000" width="0.3"  depth="0.05" height="0.5"></a-box>
+      <a-box position="1.8 1 -0.3" rotation="90 0 0" color="#330000" width="0.3"  depth="0.05" height="0.5"></a-box>
+      <!--หัว-->
+       <a-box position="1.55 0.98 0" rotation="90 90 0" color="white" width="0.15"  depth="0.15" height="0.4"></a-box>
+      <a-box position="1.35 0.95 0" rotation="90 90 0" color="yellow" width="0.1"  depth="0.05" height="0.3"></a-box>
+      <!--ตา-->
+      <a-box position="1.35 1 0.05" rotation="90 90 0" color="black" width="0.05"  depth="0.05" height="0.05"></a-box>
+       <a-box position="1.35 1 -0.05" rotation="90 90 0" color="black" width="0.05"  depth="0.05" height="0.05"></a-box>
+      <!--ตูด-->
+       <a-box position="2.3 1.1 0" rotation="70 90 0" color="#330000" width="0.25"  depth="0.05" height="0.3"></a-box>
+      </a-entity>
+    
+       
+     </a-scene>
+    
+    <div class="light"></div>
+
+
+</body>
+
+
+
+
+
+</html>
